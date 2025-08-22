@@ -16,14 +16,22 @@ void generate_column(int start, int end, int steps, double(*formula)(double), ch
 	}
 }
 
-void generate_categorical(char* categories, int* counts, int categories_amount)
+void generate_categorical(char* categories, int* counts, int steps, int categories_amount)
 {
 	for (int s = 0; s < categories_amount; ++s)
 	{
 		printf("%c: ", categories[s]);
 		for (int parals = 0; parals < counts[s]; ++parals)
 		{
-			printf("█"); // Print a block for each count
+			/*
+			The If-Statement enforces the regulation where
+			only 1 block is printed every x steps
+			*/
+			if (parals % steps == 0)
+			{
+				printf("█"); // Print a block for each count
+			}
+			
 		}
 		printf("\n");
 	}
