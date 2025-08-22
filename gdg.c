@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "gdg.h"
-#include "types.h"
+
 
 void generate_column(int start, int end, int steps, double(*formula)(double), char first_label, char second_label)
 // Generate a numeric column dataset with X and f(X)
