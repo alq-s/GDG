@@ -17,6 +17,7 @@ sudo mkdir -p /usr/local/lib
 
 sudo cp gdg.h /usr/local/include/
 sudo cp libgdg.a /usr/local/lib/
+sudo cp types.h /usr/local/include/
 
 sudo ldconfig
 
